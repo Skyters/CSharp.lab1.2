@@ -1,30 +1,10 @@
 ﻿namespace _1._2
 {
-    internal class Program
+    namespace lab1._2
     {
-        static void Main(string[] args)
+        public class Logic()
         {
-            double sum;
-            double result1;
-            double result2;
-
-            Console.Write("Введите первоначальный взнос: ");
-            string strSum = Console.ReadLine();
-            Console.Write("Укажите границу превышения величины ежемесячного увеличения вклада: ");
-            string strRes1 = Console.ReadLine();
-            Console.Write("Укажите границу превышения размера вклада за n-месяцев: ");
-            string strRes2 = Console.ReadLine();
-
-            sum = Convert.ToDouble(strSum);
-            result1 = Convert.ToDouble(strRes1);
-            result2 = Convert.ToDouble(strRes2);
-
-            if (sum < 0 || result1 < 0 || result2 < 0)
-            {
-                Console.WriteLine("Значения должны быть положительны");
-                return;
-            }
-            else
+            public static string Result(double sum, double result1, double result2)
             {
                 double newSum = sum;
                 double percent; // %
@@ -52,9 +32,42 @@
                         result += "\nЧерез " + i + " месяцев мы накопим деньги";
                         flagRes2 = true;
                     }
+
                     result += "\nМесяц " + i + ": " + newSum.ToString("F2") + " руб. " + " " + percent.ToString("F2");
                 }
-                Console.WriteLine(result);
+
+                return result;
+            }
+        }
+        internal class Program
+        {
+            static void Main(string[] args)
+            {
+                double sum;
+                double result1;
+                double result2;
+
+                Console.Write("Введите первоначальный взнос: ");
+                string strSum = Console.ReadLine();
+                Console.Write("Укажите границу превышения величины ежемесячного увеличения вклада: ");
+                string strRes1 = Console.ReadLine();
+                Console.Write("Укажите границу превышения размера вклада за n-месяцев: ");
+                string strRes2 = Console.ReadLine();
+
+                sum = Convert.ToDouble(strSum);
+                result1 = Convert.ToDouble(strRes1);
+                result2 = Convert.ToDouble(strRes2);
+
+                if (sum < 0 || result1 < 0 || result2 < 0)
+                {
+                    Console.WriteLine("Значения должны быть положительны");
+                    return;
+                }
+                else
+                {
+                    var res = Logic.Result(sum, result1, result2);
+                    Console.WriteLine(res);
+                }
             }
         }
     }
