@@ -6,7 +6,7 @@ namespace TestProject1
     public class Tests
     {
         [Test]
-        public void Test1()
+        public void TestСontribution1()
         {
             var result = Logic.Сontribution(10000, 200, 12000);
             Assert.That(result.Contains("На 2 месяце было превышение"));
@@ -16,7 +16,7 @@ namespace TestProject1
         }
 
         [Test]
-        public void Test2()
+        public void TestСontribution2()
         {
             var result = Logic.Сontribution(1000, 100, 3000);
             Assert.That(result.Contains("Месяц 1: 1020,00 руб.  20,00"));
