@@ -1,7 +1,5 @@
-﻿namespace _1._2
+﻿namespace lab1._2
 {
-    namespace lab1._2
-    {
         public class Logic()
         {
             public static string Result(double sum, double result1, double result2)
@@ -70,5 +68,4 @@
                 }
             }
         }
-    }
 }

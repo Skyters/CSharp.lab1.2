@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="1.2/1.2.csproj" />
+  <Project Path="TestProject1/TestProject1.csproj" Id="c3e2d501-fa56-4bbf-847f-dae4c3b723e9" />
 </Solution>
