@@ -2,7 +2,7 @@
 {
         public class Logic()
         {
-            public static string Сontribution(double sum, double result1, double result2)
+            public static string CalculatingTheContribution(double sum, double result1, double result2)
             {
                 double newSum = sum;
                 double percent; // %
@@ -63,7 +63,7 @@
                 }
                 else
                 {
-                    var res = Logic.Сontribution(sum, result1, result2);
+                    var res = Logic.CalculatingTheContribution(sum, result1, result2);
                     Console.WriteLine(res);
                 }
             }
