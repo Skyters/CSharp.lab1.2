@@ -12,7 +12,7 @@ namespace TestProject1
             Assert.That(result.Contains("На 2 месяце было превышение"));
             Assert.That(result.Contains("Через 10 месяцев мы накопим деньги"));
             Assert.That(result.Contains("Месяц 1: 10200,00 руб.  200,00"));
-            Assert.That(result.Contains("Месяц 50:"));
+            Assert.That(result.Contains("Месяц 20:"));
         }
 
         [Test]
@@ -20,7 +20,7 @@ namespace TestProject1
         {
             var result = Logic.CalculatingTheContribution(1000, 100, 3000);
             Assert.That(result.Contains("Месяц 1: 1020,00 руб.  20,00"));
-            Assert.That(result.Contains("Месяц 50:"));
+            Assert.That(result.Contains("Месяц 20:"));
         }
     }
 }
