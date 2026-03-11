@@ -27,7 +27,7 @@
                     if (newSum > result2 && !flagRes2)
                     {
 
-                        result += "\nЧерез " + i + " месяцев мы накопим деньги";
+                        result += "\nЧерез " + i + " месяц(ев) мы накопим деньги";
                         flagRes2 = true;
                     }
 
